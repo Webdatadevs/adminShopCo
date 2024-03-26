@@ -1,0 +1,16 @@
+.active Button{
+    background: rgba(166, 167, 248, 0.6);
+    color: rgb(58, 37, 144);
+    position: relative;
+}
+.active Button::after{
+    content: '';
+    position: absolute;
+    right: -28px;
+    width: 40px;
+    height: 3px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transform: rotateZ(90deg);
+    background: rgb(58, 37, 144);
+}
