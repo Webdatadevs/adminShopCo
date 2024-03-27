@@ -28,7 +28,10 @@ const SkeletonComponent = () => {
                     spacing="4"
                     skeletonHeight="2"
                 />
+                <Box display={'flex'} justifyContent={'space-between'} marginTop={'20px'}>
                 <SkeletonButton />
+                <SkeletonButton />
+                </Box>
             </Box>
         </>
     );
