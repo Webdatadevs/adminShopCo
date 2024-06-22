@@ -48,7 +48,7 @@ const DrawerCreatCategories = ({open, onClose}) => {
                       <FormControl marginTop={'20px'}>
                           <FormLabel textColor={'#222'}>Enter categories name</FormLabel>
                           <Input
-                          _placeholder={(mod === "dark" ? textColor = "#222" : "")} border={'1px solid rgb(58, 37, 144)'}
+                          _placeholder={mod === "dark" ? { textColor: "#222" } : {}} border={'1px solid rgb(58, 37, 144)'}
                               required
                               value={title} onChange={(e) =>setTitle(e.target.value) }
                               background={'#fff'} type="text" placeholder="categories name" />
@@ -56,7 +56,7 @@ const DrawerCreatCategories = ({open, onClose}) => {
                       <FormControl marginTop={'20px'}>
                           <FormLabel textColor={'#222'}>Enter categories image</FormLabel>
                           <Input
-                          _placeholder={(mod === "dark" ? textColor = "#222" : "")}
+                          _placeholder={mod === "dark" ? { textColor: "#222" } : {}}
                               border={'1px solid rgb(58, 37, 144)'}
                               required
                               value={image} onChange={(e) => setImage(e.target.value)} 
