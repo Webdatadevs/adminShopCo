@@ -4,6 +4,7 @@ import axios from "axios";
 import { Drawer } from "antd";
 
 const DrawerCreatCategories = ({open, onClose}) => {
+    let mod = localStorage.getItem("chakra-ui-color-mode")
     const toast = useToast()
     const [title, setTitle] = useState("")
     const [image, setImage] = useState("")
@@ -46,7 +47,8 @@ const DrawerCreatCategories = ({open, onClose}) => {
                     <Box display={'grid'} gridTemplateColumns={"repeat(auto-fit, minmax(250px, 1fr))"} alignItems={'flex-end'} gap={'20px'}>
                       <FormControl marginTop={'20px'}>
                           <FormLabel textColor={'#222'}>Enter categories name</FormLabel>
-                          <Input border={'1px solid rgb(58, 37, 144)'}
+                          <Input
+                          _placeholder={(mod === "darck" ? textColor = "#222" : "")} border={'1px solid rgb(58, 37, 144)'}
                               required
                               value={title} onChange={(e) =>setTitle(e.target.value) }
                               background={'#fff'} type="text" placeholder="categories name" />
@@ -54,6 +56,7 @@ const DrawerCreatCategories = ({open, onClose}) => {
                       <FormControl marginTop={'20px'}>
                           <FormLabel textColor={'#222'}>Enter categories image</FormLabel>
                           <Input
+                          _placeholder={(mod === "darck" ? textColor = "#222" : "")}
                               border={'1px solid rgb(58, 37, 144)'}
                               required
                               value={image} onChange={(e) => setImage(e.target.value)} 

@@ -19,12 +19,12 @@ const CategoriesCard = ({item}) => {
     const [open, setOpen] = useState(false);
 
     const showDrawer = () => {
-        setOpen(true);
+        (true);
     };
 
     const onClose = () => {
         setOpen(false);
-    };
+    };setOpen
     
     useEffect(() =>{
       getCategories(dispatch)
